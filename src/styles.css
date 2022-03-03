@@ -1,0 +1,170 @@
+:root {
+    --delete-button-color: #ff4d4f;
+    --delete-button-hover-color: #fc6d6f;
+    --hover-focus-border-color: #40a9ff;
+    --main-border-color: #d9d9d9;
+}  
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.formBox {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button {
+    background-color: transparent;
+    outline: currentcolor none 0px;
+    margin: 0px;
+    cursor: pointer;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    padding: 5px 15px;
+    white-space: nowrap;
+    border-radius: 4px;
+    transition: all .3s,height 0s;
+    border: 1px solid var(--main-border-color);
+}
+
+.button:hover{
+    background-color: #e2f2ff;
+    border: 1px solid var(--hover-focus-border-color);
+}
+
+.deleteButton {
+    margin: 0px;
+    cursor: pointer;
+    white-space: nowrap;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    min-width: 64px;
+    height: fit-content;
+    padding: 5px 15px;
+    transition: all .3s,height 0s;
+    border-radius: 4px;
+    border: 1px solid var(--delete-button-color);
+    background-color: var(--delete-button-color);
+    color: white;
+}
+
+.deleteButton:hover{
+    border: 1px solid var(--delete-button-hover-color);
+    background-color: var(--delete-button-hover-color);
+}
+
+.appbar {
+    list-style: none;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.7) none repeat scroll 0% 0%;
+    border-bottom: 1px solid var(--main-border-color);
+    width: 100%;
+    height: 7%;
+    margin: 0;
+    z-index: 1;
+}
+
+.formInput {
+    resize: none;
+    line-height: 1.5;
+    font-size: 14px;
+    padding: 4px 11px;
+    border: 1px solid var(--main-border-color);
+    border-radius: 8px;
+    transition: all .3s,height 0s;
+}
+
+.formInput:hover {
+    border-color: var(--hover-focus-border-color);
+}
+
+.formInput:focus {
+    border-color: var(--hover-focus-border-color);
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, .2);
+    outline: 0;
+}
+
+.notesApp {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+}
+
+.notes {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 1%;
+}
+
+.note {
+    background-color: #FFFF99;
+    height: 10%;
+    width: 55vw;
+    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 1px -1px, rgba(0, 0, 0, 0.14) 0px 1px 1px 0px, rgba(0, 0, 0, 0.12) 0px 1px 3px 0px;
+}
+
+.noteTop {
+    display: flex;
+    justify-content: space-between;
+}
+
+.noteText {
+    overflow: hidden;
+    word-break: break-word;
+    max-width: 80%;
+    max-height: 94px;
+    padding-left: 1%;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+}
+
+.noteBox{
+    padding-top: 1%;
+}
+
+.date {
+    text-decoration: none;
+    color: black;
+}
+
+.dateBox {
+    padding: 1%;
+}
+
+.noteActions {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonBox {
+    padding: 1%;
+    align-self: center;
+    height: fit-content;
+}
+
+.deleteButtonBox {
+    display: flex;
+    align-items: center;
+    padding: 1%;
+}
+
+.noteDate {
+    padding: 1%;
+}
+
+.selectedNoteText{
+    overflow: hidden;
+    word-break: break-word;
+    padding: 1%;
+}
