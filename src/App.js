@@ -20,8 +20,7 @@ const NotesApp = () => {
       setNotes(newNote.concat(notes));
     },
     delete: function(timestamp) {
-      const notesFiltered = notes.filter(filteredNote => filteredNote.additionTimestamp !== timestamp);
-      setNotes(notesFiltered.sort((firstNote, secondNote) => secondNote.additionTimestamp - firstNote.additionTimestamp));
+      setNotes(notes.filter(filteredNote => filteredNote.additionTimestamp !== timestamp));
     }
   };
 
